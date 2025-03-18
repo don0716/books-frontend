@@ -2,7 +2,7 @@ import useFetch from "../useFetch"
 
 const BookByTitle = ({title}) => {
     const {data, loading, error} = useFetch(`https://backend-books-theta.vercel.app/books/${title}`)
-    // console.log("Book By Title:: " , data)
+    
     return (
         <div>
             {

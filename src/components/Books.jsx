@@ -6,7 +6,7 @@ const Books = () => {
     // const {data, loading, error} = useFetch(`http://localhost:3000/books`)
     const {data, loading, error} = useFetch(`https://backend-books-theta.vercel.app/books`)
 
-    console.log(data)
+    // console.log(data)
 
     const handleDelete = async (movieId) => {
         try{

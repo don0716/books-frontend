@@ -3,7 +3,6 @@ import useFetch from "../useFetch"
 const BookByAuthor = ({author}) => {
 
     const {data, loading, error} = useFetch(`https://backend-books-theta.vercel.app/books/author/${author}`)
-    // console.log("BookByAuthorData:: ", data)
 
     return (
         <div>
