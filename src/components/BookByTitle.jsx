@@ -6,7 +6,7 @@ const BookByTitle = ({title}) => {
     return (
         <div>
             {
-                data ? data?.map(book => (
+                data?.length > 0 ? data.map(book => (
                     <div key={book._id}>
                         <h2>{book.title}</h2>
                         <p><strong>Author:</strong>{book.title}</p>
