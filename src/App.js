@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Books />
-      <BookByTitle title="Shoe Dog" />
+      <BookByTitle title="The Great Gatsby" />
       <BookByAuthor author="Harper Lee" />
       <AddNewBook />
     </div>
