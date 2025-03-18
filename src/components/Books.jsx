@@ -3,7 +3,6 @@ import useFetch from "../useFetch"
 
 const Books = () => {
     const [successMessage, setSuccessMessage] = useState("")
-    // const {data, loading, error} = useFetch(`http://localhost:3000/books`)
     const {data, loading, error} = useFetch(`https://backend-books-theta.vercel.app/books`)
 
     // console.log(data)
@@ -36,12 +35,14 @@ const Books = () => {
 
             <div>
                <ul>
+                {loading && "Loading..."}
+                {error && "Error loading Books."}
                {
-                    data ? data?.map(book => (
+                    data?.length > 0 ? data.map(book => (
                         <li key={book._id}>
                             {book.title} <button onClick={() => handleDelete(book._id)}>Delete</button>
                         </li>
-                    )) : loading && "Loading..."
+                    )) : !loading && "No Books Found."
                 }
                </ul>
             </div>
