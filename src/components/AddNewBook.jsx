@@ -33,6 +33,7 @@ const AddNewBook = () => {
             }
 
             const data = await res.json()
+            window.location.reload()
             console.log("Added Book::", data)
 
         }catch(error){
