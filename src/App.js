@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import AddNewBook from "./components/AddNewBook";
+import BookByAuthor from "./components/BookByAuthor";
+import BookByTitle from "./components/BookByTitle";
+import Books from "./components/Books";
+const apiUrl = process.env.REACT_APP_API_URL;
+const response = await fetch(`${apiUrl}/books`);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Books />
+      <BookByTitle title="Shoe Dog" />
+      <BookByAuthor author="Harper Lee" />
+      <AddNewBook />
     </div>
   );
 }
